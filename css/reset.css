@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+html {
+    margin: 0px;
+    padding: 0px;
+    background: #fff
+}
+
+body,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+a,
+address,
+del,
+em,
+font,
+img,
+strong,
+b,
+u,
+i,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+caption,
+tbody,
+thead,
+tfoot,
+th,
+tr,
+td,
+fieldset,
+form,
+label,
+legend,
+input,
+textarea,
+button,
+select,
+header,
+section,
+footer,
+article,
+aside,
+nav,
+hgroup,
+details,
+menu,
+figure,
+figcaption,
+span {
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+    list-style: none
+}
+
+input:focus,
+textarea:focus {
+    outline: none
+}
+
+header,
+footer,
+section,
+article,
+aside,
+nav,
+hgroup,
+details,
+menu,
+figure,
+figcaption,
+fieldset {
+    display: block
+}
+
+img,
+table,
+caption,
+tbody,
+thead,
+tfoot,
+tr,
+th,
+td,
+button,
+hr {
+    border-image: none
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+span,
+th,
+var {
+    font-style: normal
+}
+
+caption,
+legend {
+    line-height: 0;
+    overflow: hidden;
+    font-size: 0px
+}
+
+img {
+    vertical-align: middle
+}
+
+a {
+    text-decoration: none
+}
+
+a:hover {
+    outline: 0px
+}
+
+a:active {
+    outline: 0px
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #444
+}
+
+a:hover,
+a:active {
+    text-decoration: none;
+    color: #444
+}
+
+img,
+fieldset,
+button {
+    border: none
+}
+
+button {
+    cursor: pointer
+}
+
+#skip {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    z-index: 999
+}
+
+#skip a {
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+
+#skip a:focus {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+body,
+input,
+select,
+button,
+textarea {
+    font-family: 'SamsungOne', Dotum, '돋움', sans-serif;
+    font-size: 14px;
+    color: #444
+}
+
+.skip,
+caption,
+.blind,
+legend {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    font-size: 12px;
+    clip: rect(1px, 1px, 1px, 1px)
+}

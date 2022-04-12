@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "SamsungOne";
+    font-style: normal;
+    font-weight: 400;
+    src: url(SamsungOneKorean-400.eot);
+    src: url(SamsungOneKorean-400.eot?#iefix) format("embedded-opentype"),
+        url(SamsungOneKorean-400.ttf) format("truetype"),
+        url(SamsungOneKorean-400.woff) format("woff"),
+        url(SamsungOneKorean-400.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "SamsungOne";
+    font-style: normal;
+    font-weight: 700;
+    src: url(SamsungOneKorean-700.eot);
+    src: url(SamsungOneKorean-700.eot?#iefix) format("embedded-opentype"),
+        url(SamsungOneKorean-700.ttf) format("truetype"),
+        url(SamsungOneKorean-700.woff) format("woff"),
+        url(SamsungOneKorean-700.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "SamsungOne";
+    font-style: normal;
+    font-weight: 900;
+    src: url(SamsungSharpSans-Bold.eot);
+    src: url(SamsungSharpSans-Bold.eot?#iefix) format("embedded-opentype"),
+        url(SamsungSharpSans-Bold.ttf) format("truetype"),
+        url(SamsungSharpSans-Bold.woff) format("woff"),
+        url(SamsungSharpSans-Bold.woff2) format("woff2");
+}
