@@ -4,6 +4,8 @@
             body : document.querySelector('body'),
             dimm : document.querySelector(".dimm"),
             scrollPosition : 0,
+            delay : 0,
+            timer : null,
         }
     }
 
@@ -72,8 +74,8 @@
                 gnb.elem.moMenuCloseBtn.addEventListener("click", function (e) {
                     e.preventDefault();
                     gnb.elem.moMenuWrap.classList.remove("open");
-                    gnb.elem.moMenuWrap.style.display = "none";
-                    common.elem.dimm.style.display = "none";
+                    gnb.elem.moMenuWrap.removeAttribute("style");
+                    common.elem.dimm.removeAttribute("style");
 
                     common.elem.body.removeAttribute("style");
                     window.scrollTo(0, common.elem.scrollPosition);
@@ -175,6 +177,10 @@
             }
         },
 
+        resize: function () {
+            this.event.mouseEnter();
+        },
+
         init: function () {
             this.event.mouseEnter();
             this.event.mouseLeave();
@@ -189,10 +195,10 @@
 
 
     window.addEventListener('resize', function(){
-        // clearTimeout(slide.elem.timer);
-        // slide.elem.timer = setTimeout(function(){
-        //     slide.resize();
-        // }, slide.elem.delay);
+        clearTimeout(gnb.elem.timer);
+        gnb.elem.timer = setTimeout(function(){
+            gnb.resize();
+        }, gnb.elem.delay);
     });
     
     window.onload = function () {
