@@ -26,19 +26,29 @@
             // moBottomLogin : document.querySelector('.mo-login-bottom'), 
         },
 
+        gnbStyle(__el, index, type) {
+            var __elLeft = __el.offsetLeft,
+                __elPadLeft = Math.round(window.getComputedStyle(__el).getPropertyValue('padding-left').replace(/[^0-9^.]/g, '')),
+                __elAWidth = __el.querySelector(".gnb-1depth__title").offsetWidth;
+
+            if (type === 'enter') {
+                gnb.elem.menuBar.style.display = "block";
+                gnb.elem.subMenu[index - 1].style.display = "block";
+                gnb.elem.menuBar.style.left = (__elLeft + __elPadLeft) + "px";
+                gnb.elem.menuBar.style.width = __elAWidth + "px";
+            } else {
+                gnb.elem.menuBar.style.display = "none";
+                gnb.elem.subMenu[index - 1].style.display = "none";
+            }
+        },
+
         event: {
             mouseEnter : function () {
                 [].forEach.call(gnb.elem.mainMenu, function (__el, index) {
-                    var __elLeft = __el.offsetLeft,
-                        __elPadLeft = Math.round(window.getComputedStyle(__el).getPropertyValue('padding-left').replace(/[^0-9^.]/g, '')),
-                        __elAWidth = __el.querySelector(".gnb-1depth__title").offsetWidth;
-
                     __el.addEventListener('mouseenter', function (__e) {
+                        if (window.innerWidth <= 1200) return;
                         __e.preventDefault();
-                        gnb.elem.menuBar.style.display = "block";
-                        gnb.elem.subMenu[index - 1].style.display = "block";
-                        gnb.elem.menuBar.style.left = (__elLeft + __elPadLeft) + "px";
-                        gnb.elem.menuBar.style.width = __elAWidth + "px";
+                        gnb.gnbStyle(__e.target, index, 'enter');
                     });
                 });
             },
@@ -46,9 +56,9 @@
             mouseLeave : function () {
                 [].forEach.call(gnb.elem.mainMenu, function (__el, index) {
                     __el.addEventListener('mouseleave', function (__e) {
+                        if (window.innerWidth <= 1200) return;
                         __e.preventDefault();
-                        gnb.elem.menuBar.style.display = "none";
-                        gnb.elem.subMenu[index - 1].style.display = "none";
+                        gnb.gnbStyle(__e.target, index, 'leave');
                     });
                 });
             },
